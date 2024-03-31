@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "power\u003d0": {
+      "model": "block/light_weighted_pressure_plate"
+    },
+    "power\u003d1": {
+      "model": "block/light_weighted_pressure_plate_down"
+    },
+    "power\u003d2": {
+      "model": "block/plate_1"
+    },
+    "power\u003d3": {
+      "model": "block/plate_2"
+    },
+    "power\u003d6": [
+	{ "model": "mcme:block/cutlery"},
+	{ "model": "mcme:block/cutleryr_2"},
+	{ "model": "mcme:block/cutleryr_3"},
+	{ "model": "mcme:block/cutleryr_4"}
+    ],
+    "power\u003d7": [
+	{ "model": "mcme:block/cutlery_2"},
+	{ "model": "mcme:block/cutlery_2_2"},
+	{ "model": "mcme:block/cutlery_3_2"},
+	{ "model": "mcme:block/cutlery_4_2"}
+    ],
+    "power\u003d4": [
+	{ "model": "mcme:block/cutlery_3"},
+	{ "model": "mcme:block/cutlery_2_3"},
+	{ "model": "mcme:block/cutlery_3_3"},
+	{ "model": "mcme:block/cutlery_4_3"}
+    ],
+    "power\u003d5": [
+	{ "model": "mcme:block/cutlery_4"},
+	{ "model": "mcme:block/cutlery_2_4"},
+	{ "model": "mcme:block/cutlery_3_4"},
+	{ "model": "mcme:block/cutlery_4_4"}
+    ],
+    "power\u003d8": {
+      "model": "block/replace"
+    },
+    "power\u003d9": {
+      "model": "block/replace"
+    },
+    "power\u003d10": {
+      "model": "block/replace"
+    },
+    "power\u003d11": {
+      "model": "block/replace"
+    },
+    "power\u003d12": {
+      "model": "block/replace"
+    },
+    "power\u003d13": {
+      "model": "block/replace"
+    },
+    "power\u003d14": {
+      "model": "block/replace"
+    },
+    "power\u003d15": {
+      "model": "block/replace"
+    }
+  }
+}
