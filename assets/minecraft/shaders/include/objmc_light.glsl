@@ -1,6 +1,15 @@
 //objmc
 //https://github.com/Godlander/objmc
 
+
+
+#define MIP_FADE (0.8)
+#define BASE_BRIGHTNESS (0.2)
+#define AO_INTENSIITY (0.7)
+#define CUSTOM_MODEL_NORMAL_SHADING (3.0)
+#define UNDER_SHADOW_STRENGTH (0.2)
+#define DISTANCE_DENSITY (1.25)
+
 //default lighting
 if (isCustom == 0) {color *= vertexColor * lightColor * ColorModulator;}
 //custom lighting
@@ -14,12 +23,14 @@ else if (noshadow == 0) {
     float horizontal = abs(normal.z) * 0.15 + 0.7;
 	float undershadow =  abs(normal.y);
 	if ((normal.y) < 0.7) {
-	    undershadow = undershadow * 0.69;
+	    undershadow = undershadow * UNDER_SHADOW_STRENGTH * underShadowStrength;
 	}
-    float brightness = 0.03 + mix(horizontal, vertical, undershadow);
-    color *= vec4(vec3(brightness), 1.0);
+    float brightness = BASE_BRIGHTNESS * baseBrightness + mix(horizontal, vertical, undershadow);
+    color *= vec4(vec3(mix(1.0,brightness,CUSTOM_MODEL_NORMAL_SHADING * customModelNormalShading)), 1.0);
+    color *= mix(vec4(1.0),vertexColor,AO_INTENSIITY * aoIntensity);
+    color *= vec4(1.0,1.0,1.0,DISTANCE_DENSITY * distanceDensity);
+    if (color.a < MIP_FADE * customMipFade) discard;
     #endif
-	
 
     //entity lighting
     #ifdef ENTITY
